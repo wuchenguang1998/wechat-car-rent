@@ -1,0 +1,14 @@
+<!--pages/mine/mine.wxml-->
+<view class="userband">
+  <image src="{{userimg}}"></image>
+  <view>
+  <text>您好,{{username}}!</text>
+  <text>欢迎使用汽车租赁服务</text>
+  </view>
+</view>
+<van-grid column-num="2">
+  <van-grid-item bind:click="toOrder" clickable="true" icon="notes-o" text="订单" />
+  <van-grid-item bind:click="toRecharge" clickable="true" icon="cash-back-record" text="充值" />
+  <van-grid-item clickable="true" icon="balance-o" text="金币：{{gold}}" />
+  <van-grid-item clickable="true" icon="more-o" text="敬请期待..." />
+</van-grid>

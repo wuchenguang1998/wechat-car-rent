@@ -1,0 +1,26 @@
+<van-notice-bar
+  left-icon="info-o"
+  text="该小程序由广州大学2020届毕业生吴晨光所制作，最终解释权归其所有。"
+/>
+<swiper class="banner" autoplay="true" indicator-dots="true" interval="3000" circular="true">
+  <swiper-item><image src="../../images/banner/banner1.png"></image></swiper-item>
+  <swiper-item><image src="../../images/banner/banner2.png"></image></swiper-item>
+  <swiper-item><image src="../../images/banner/banner3.png"></image></swiper-item>
+</swiper>
+<view class="answer" bindtap="showanswer">
+  <text>问答&须知</text>
+</view>
+<view class="all" bindtap="showall">
+  <text>全部车型</text>
+</view>
+<van-divider contentPosition="center" textColor="#1989fa" fontSize="18">热门推荐</van-divider>
+<view class="product-container">
+<block wx:for="{{productList}}" wx:for-item="item" wx:key="index">
+  <view class="product" bindtap="showitem" id="{{item.id}}">
+    <view>{{item.title}}</view>
+    <image src="{{item.titimg}}" mode="widthFix"></image>
+    <view class="price">￥{{item.price}}/周</view>
+  </view>
+</block>
+</view>
+<view class="tip">已经到底啦</view>

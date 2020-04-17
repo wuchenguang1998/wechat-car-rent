@@ -1,0 +1,64 @@
+/**index.wxss**/
+.banner{
+  width: 96%;
+  height: 360rpx;
+  border-radius: 15rpx;
+  margin: 0 auto;
+}
+swiper-item,image{
+  width: 100%;
+  height: 100%;
+  border-radius: 15rpx;
+}
+.answer{
+  width: 96%;
+  height: 100rpx;
+  background-color: aquamarine;
+  text-align: center;
+  margin: 10rpx auto;
+  border-radius: 15rpx;
+}
+.answer text{
+  font-size: 50rpx;
+  line-height: 100rpx;
+  font-weight: 500;
+}
+.all{
+  width: 96%;
+  height: 100rpx;
+  background-color: rgb(155, 185, 43);
+  text-align: center;
+  margin: 10rpx auto;
+  border-radius: 15rpx;
+}
+.all text{
+  font-size: 50rpx;
+  line-height: 100rpx;
+  font-weight: 500;
+}
+.product-container{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 0 auto;
+}
+.product{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 10rpx;
+  border: blueviolet 1rpx solid;
+  width: 45%;
+  margin: 10rpx 17.8rpx;
+}
+.product view{
+  height: 50rpx;
+  line-height: 50rpx;
+}
+.product .price{
+  color: red;
+}
+view.tip{
+  margin: 15rpx 280rpx;
+}

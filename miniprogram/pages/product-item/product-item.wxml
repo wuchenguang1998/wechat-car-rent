@@ -1,0 +1,37 @@
+<view class="container">
+  <swiper indicator-dots="true" circular="true">
+    <swiper-item><image src="{{productmessage.banner1}}"></image></swiper-item>
+    <swiper-item><image src="{{productmessage.banner2}}"></image></swiper-item>
+  </swiper>
+  <view class="content">
+    <view class="messcontent">
+      <text class="title">{{productmessage.title}}</text>
+      <text class="price">￥{{productmessage.price}}/周</text>
+    </view>
+    <van-divider contentPosition="center" borderColor="#1989fa" textColor="#000000">注意事项</van-divider>
+    <view class="alert">
+      <text>1.本店出租车辆均为正品，每周定时检修，质量有保证！</text>
+      <text>2.每车配有唯一标识码，用户借还车之前请确保标识码前后一致。</text>
+      <text>3.本店不接受18岁以下用户下单。若借车人转借该车给未成年人，后果自负！</text>
+      <text>4.本店图片仅供参考展示，颜色及折旧程度因车而异，以实物为准。</text>
+      <text>5.为避免出现个人占用过多优质资源的情况，每人每车限租一台，请注意！</text>
+    </view>
+    <view class="detail">
+      <text>商品详情：</text>
+      <image mode="widthFix" src="{{productmessage.imgSrc1}}"></image>
+      <image mode="widthFix" src="{{productmessage.imgSrc2}}"></image>
+    </view>
+  </view>
+</view>
+<van-goods-action>
+  <van-goods-action-icon
+    icon="cart-o"
+    text="购物车"
+    bind:click="onClickCart"
+  />
+  <van-goods-action-button
+    text="加入购物车"
+    type="warning"
+    bind:click="onClickAddCart"
+  />
+</van-goods-action>

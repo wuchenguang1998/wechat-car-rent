@@ -1,0 +1,10 @@
+<!--pages/allproduct/allproduct.wxml-->
+<view wx:for="{{productList}}" wx:key="index">
+  <view  class="product-container" bindtap="showitem" id="{{item.id}}">
+    <image mode="widthFix" src="{{item.titimg}}"></image>
+    <view class="text-container">
+      <text class="title">{{item.title}}</text>
+      <text class="price">￥{{item.price}}/周</text>
+    </view>
+  </view>
+</view>

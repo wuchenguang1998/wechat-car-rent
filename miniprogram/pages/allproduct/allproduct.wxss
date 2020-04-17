@@ -1,0 +1,27 @@
+/* pages/allproduct/allproduct.wxss */
+.product-container{
+  width: 98%;
+  margin: 10rpx auto;
+  border: 1rpx blanchedalmond solid;
+  border-radius: 10rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.product-container image{
+  width: 250rpx;
+  margin: 23rpx 35rpx 23rpx 23rpx;
+  border-radius: 10rpx;
+}
+.product-container .text-container{
+  display: flex;
+  flex-direction: column;
+}
+.product-container .text-container .title{
+  margin-bottom: 50rpx;
+  font-size: 40rpx;
+  font-weight: bolder;
+}
+.product-container .text-container .price{
+  color: red;
+}

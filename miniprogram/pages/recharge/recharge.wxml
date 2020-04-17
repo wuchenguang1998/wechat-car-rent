@@ -1,0 +1,4 @@
+<!--pages/recharge/recharge.wxml-->
+<view>
+  <text selectable="true">请添加充值专用客服微信进行充值：1160875561</text>
+</view>

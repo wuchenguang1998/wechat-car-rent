@@ -1,0 +1,23 @@
+<!--pages/class/class.wxml-->
+<view class="container">
+	<van-sidebar active-key="{{ activeKey }}" bind:change="onChange">
+		<van-sidebar-item title="宝马" />
+		<van-sidebar-item title="奔驰" />
+		<van-sidebar-item title="奥迪" />
+		<van-sidebar-item title="法拉利" />
+		<van-sidebar-item title="兰博基尼" />
+		<van-sidebar-item title="保时捷" />
+	</van-sidebar>
+	<van-notify id="van-notify" />
+	<view class="product">
+		<view wx:for="{{productList}}" wx:key="index">
+			<view class="product-container" bindtap="showitem" id="{{item.id}}">
+				<image mode="widthFix" src="{{item.titimg}}"></image>
+				<view class="text-container">
+					<text class="title">{{item.title}}</text>
+					<text class="price">￥{{item.price}}/周</text>
+				</view>
+			</view>
+		</view>
+	</view>
+</view>

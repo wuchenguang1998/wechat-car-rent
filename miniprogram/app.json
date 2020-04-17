@@ -1,0 +1,49 @@
+{
+  "pages": [
+    "pages/authorize/authorize",
+    "pages/index/index",
+    "pages/class/class",
+    "pages/cart/cart",
+    "pages/mine/mine",
+    "pages/answer/answer",
+    "pages/allproduct/allproduct",
+    "pages/product-item/product-item",
+    "pages/order/order",
+    "pages/recharge/recharge"
+  ],
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#F6F6F6",
+    "navigationBarTitleText": "晨之光汽车租赁",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#000000",
+    "selectedColor": "#lafa29",
+    "backgroundColor": "#ffffff",
+    "list": [{
+      "pagePath": "pages/index/index",
+      "text": "首页",
+      "iconPath": "../miniprogram/images/icons/1.png",
+      "selectedIconPath": "../miniprogram/images/icons/1_1.png"
+    },{
+      "pagePath": "pages/class/class",
+      "text": "分类",
+      "iconPath": "../miniprogram/images/icons/2.png",
+      "selectedIconPath": "../miniprogram/images/icons/2_1.png"
+    },{
+      "pagePath": "pages/cart/cart",
+      "text": "购物车",
+      "iconPath": "../miniprogram/images/icons/3.png",
+      "selectedIconPath": "../miniprogram/images/icons/3_1.png"
+    },{
+      "pagePath": "pages/mine/mine",
+      "text": "我的",
+      "iconPath": "../miniprogram/images/icons/4.png",
+      "selectedIconPath": "../miniprogram/images/icons/4_1.png"
+    }
+  ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

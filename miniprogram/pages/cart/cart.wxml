@@ -1,0 +1,18 @@
+<!--pages/cart/cart.wxml-->
+<view class="container">
+  <view wx:for="{{productList}}" wx:key="index">
+    <view  class="product-container" bindlongpress="deleteproduct" bindtap="showitem" data-id="{{item.id}}" id="{{item._id}}">
+      <image mode="widthFix" src="{{item.titimg}}"></image>
+      <view class="text-container">
+        <text class="title">{{item.title}}</text>
+        <text class="price">￥{{item.price}}/周</text>
+      </view>
+    </view>
+  </view>
+</view>
+<van-submit-bar
+  bar-class="barclass"
+  price="{{totalprice*100}}"
+  button-text="提交订单"
+  bind:submit="onSubmit"
+/>

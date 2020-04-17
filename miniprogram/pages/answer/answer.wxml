@@ -1,0 +1,8 @@
+<!--pages/answer/answer.wxml-->
+<block wx:for="{{answerList}}" wx:for-item="item" wx:key="index">
+<van-collapse value="{{ activeNames }}" bind:change="onChange">
+  <van-collapse-item title="{{index+1}}:{{item.qu}}" name="{{index}}">
+    {{item.an}}
+  </van-collapse-item>
+</van-collapse>
+</block>

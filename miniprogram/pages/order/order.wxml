@@ -1,0 +1,35 @@
+<!--pages/order/order.wxml-->
+<van-tabs active="{{ active }}" bind:change="onChange" sticky swipeable="true" custom-class="aa">
+	<van-tab title="未完成">
+		<view wx:for="{{uncompleteList}}" wx:key="index">
+			<view class="product-container" bindtap="showitem" id="{{item.id}}">
+				<image class="img1" mode="widthFix" src="{{item.titimg}}"></image>
+				<view class="text-container">
+					<text class="title">{{item.title}}</text>
+					<text class="price">￥{{item.price}}/周</text>
+				</view>
+        <image class="img2" mode="widthFix" src="../../images/waiticon.png"></image>
+			</view>
+		</view>
+	</van-tab>
+	<van-tab title="已完成">
+    <view wx:for="{{completedList}}" wx:key="index">
+			<view class="product-container" bindtap="showitem" id="{{item.id}}">
+				<image class="img1" mode="widthFix" src="{{item.titimg}}"></image>
+				<view class="text-container">
+					<text class="title">{{item.title}}</text>
+					<text class="price">￥{{item.price}}/周</text>
+				</view>
+			</view>
+		</view>
+	</van-tab>
+</van-tabs>
+<view wx:if="{{isShow}}">
+  <van-goods-action>
+    <van-goods-action-button
+      text="点击确认提车(仅支持一键提车)"
+      color="#7232dd"
+      bind:click="onClickButton"
+    />
+  </van-goods-action>
+</view>
