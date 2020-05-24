@@ -2,6 +2,7 @@
 const db = wx.cloud.database()
 const product = db.collection('product')
 const cart = db.collection('cart')
+const comment = db.collection('comment')
 const app = getApp()
 Page({
 
@@ -9,7 +10,9 @@ Page({
    * 页面的初始数据
    */
   data: {
-    productmessage:{}
+    productmessage:{},
+    commentList:{},
+    pid:0
   },
   onClickCart:function(){
     wx.switchTab({
@@ -61,17 +64,33 @@ Page({
       }
     })
   },
+  todetail:function(){
+    wx.navigateTo({
+      url: '../commentdetail/commentdetail?id='+this.data.pid,    //跳转时，将当前商品的id附加到URL上传递出去
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
     var pid=options.id;    //得到的options.id是字符类型的，因此下面要进行类型转换
     pid=parseInt(pid)
-    product.where({
+    this.setData({
+      pid:pid
+    })
+    product.where({        //获取product表中的数据，渲染到前端
       id:pid
     }).get().then(res=>{
       this.setData({
         productmessage:res.data[0]   //得到的结果是[{....}],注意该结果的类型
+      },res=>{
+      })
+    })
+    comment.where({      //获取comment表的数据，渲染到前端
+      id:pid
+    }).get().then(res=>{
+      this.setData({
+        commentList:res.data[0].commentlist   //得到的结果是[{....}],注意该结果的类型
       },res=>{
       })
     })

@@ -10,10 +10,10 @@ swiper-item,image{
   height: 100%;
   border-radius: 15rpx;
 }
-.answer{
+/* .answer{
   width: 96%;
   height: 100rpx;
-  background-color: aquamarine;
+  background-color: rgb(153, 248, 217);
   text-align: center;
   margin: 10rpx auto;
   border-radius: 15rpx;
@@ -26,7 +26,7 @@ swiper-item,image{
 .all{
   width: 96%;
   height: 100rpx;
-  background-color: rgb(155, 185, 43);
+  background-color: rgb(153, 248, 217);
   text-align: center;
   margin: 10rpx auto;
   border-radius: 15rpx;
@@ -35,6 +35,44 @@ swiper-item,image{
   font-size: 50rpx;
   line-height: 100rpx;
   font-weight: 500;
+} */
+.navcontainer{
+  display: flex;
+  width: 93%;
+  height: 125rpx;
+  border-radius: 15rpx;
+  margin: 15rpx auto;
+  padding: 15rpx;
+  background-color: #ffda65;
+}
+.answer{
+  width: 50%;
+  height: 100%;
+  border-right: #8a8ecd 1rpx solid;
+}
+.all{
+  width: 50%;
+  height: 100%;
+  margin-left: 15rpx;
+}
+.answer,.all{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.answer text,.all text{
+  color: #6e6b76;
+  font-size: 40rpx;
+  font-weight: 500;
+}
+.answer view,.all view{
+  width: 190rpx;
+  height: 50rpx;
+  text-align: center;
+  color: #ffda65;
+  background-color: #8a8ecd;
+  border-radius: 25rpx;
 }
 .product-container{
   width: 100%;

@@ -24,16 +24,16 @@ Page({
     wx.cloud.callFunction({
      name: 'getOpenid',
      complete: res => {
-      console.log('云函数获取到的openid: ', res.result.openId)
+      /* console.log('云函数获取到的openid: ', res.result.openId) */
       var openid = res.result.openId;
       app.globalData.openId=openid
-      console.log('openid: ', app.globalData.openId)
+      /* console.log('openid: ', app.globalData.openId) */
 
       user.where({
         _openid: res.result.openId   // 当前用户 openid
       }).count({
         success: function(res) {
-          console.log("总数为",res.total)
+          /* console.log("总数为",res.total) */
           if(res.total==0){
             user.add({
               data:{

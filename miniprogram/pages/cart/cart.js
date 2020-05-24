@@ -73,7 +73,7 @@ Page({
     wx.showModal({
       title: '提示',
       content: '是否提交订单',
-      success:(res)=>{
+      success:res=>{
         if (res.confirm) {           //当点击确认时
           if(gold<this.data.totalprice){     //当计算出余额不足时，提醒用户余额不足
             wx.showToast({

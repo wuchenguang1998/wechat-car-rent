@@ -1,0 +1,15 @@
+<!--pages/commentdetail/commentdetail.wxml-->
+<view class="commentcontainer">
+	<view class="title">
+		<text class="commentcounter">相关评论({{commentList.length}})</text>
+	</view>
+	<view class="usercomment" wx:for="{{commentList}}" wx:for-item="item" wx:key="index">
+		<view class="usermsg">
+			<image src="{{item.userimg}}"></image>
+			<text>{{item.username}}</text>
+		</view>
+		<view class="commentdetail">
+			{{item.commentdetail}}
+		</view>
+	</view>
+</view>

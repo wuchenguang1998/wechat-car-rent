@@ -1,0 +1,42 @@
+/* pages/commentdetail/commentdetail.wxss */
+.commentcontainer{
+  border: blue solid 1rpx;
+  border-radius: 10rpx;
+}
+.commentcontainer .title{
+  height: 60rpx;
+  border-bottom: blue solid 2rpx;
+  background-color: #cac8c8;
+  line-height: 60rpx;
+  font-size: 35rpx;
+}
+.commentcontainer .title .commentcounter{
+  margin-left: 15rpx;
+}
+.commentcontainer .title .lookmore{
+  float: right;
+  margin-right: 15rpx;
+}
+.usercomment{
+  margin: 15rpx;
+  border-bottom: #9d9d9d solid 1rpx;
+}
+.usermsg{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.usermsg image{
+  width: 65rpx;
+  height: 65rpx;
+  border-radius: 65rpx;
+  margin-right: 22rpx;
+}
+.usermsg text{
+  font-size: 40rpx;
+}
+.commentdetail{
+  color: rgb(68, 65, 65);
+  font-weight: normal;
+  margin-bottom: 8rpx;
+}

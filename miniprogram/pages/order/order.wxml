@@ -20,6 +20,7 @@
 					<text class="title">{{item.title}}</text>
 					<text class="price">￥{{item.price}}/周</text>
 				</view>
+				<van-button type="info" size="small" bind:click="tocomment" id="{{item.id}}" disabled="{{item.iscomment}}">评价</van-button>
 			</view>
 		</view>
 	</van-tab>

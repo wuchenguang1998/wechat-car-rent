@@ -1,10 +1,11 @@
 /* pages/order/order.wxss */
 .aa{
-  margin-bottom: 125rpx;
+  margin-bottom: 80rpx;
 }
 .product-container{
   width: 98%;
   margin: 10rpx auto;
+  padding-right: 10rpx;
   border: 1rpx blanchedalmond solid;
   border-radius: 10rpx;
   display: flex;

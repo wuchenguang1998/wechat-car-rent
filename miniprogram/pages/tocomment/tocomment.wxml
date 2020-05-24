@@ -1,0 +1,5 @@
+<!--pages/tocomment/tocomment.wxml-->
+<form bindsubmit="bindFormSubmit">
+	<textarea placeholder="请输入评价" auto-focus="true" name="textarea"></textarea>
+	<button form-type="submit">提交</button>
+</form>

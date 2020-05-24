@@ -66,7 +66,7 @@ Page({
                     wx.showToast({
                       title: '确认成功！',
                       icon: 'success',
-                      duration: 800
+                      duration: 1200
                     })
                     this.showuncomplete()
                   }
@@ -90,7 +90,12 @@ Page({
       }
     })
   },
-
+  tocomment:function(e){
+    var id=e.currentTarget.id
+    wx.navigateTo({
+      url: '../tocomment/tocomment?id='+id,
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */

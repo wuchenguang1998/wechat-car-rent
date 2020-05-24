@@ -1,0 +1,13 @@
+/* pages/tocomment/tocomment.wxss */
+textarea{
+  display: block;
+  width: 92%;
+  margin: 10rpx auto;
+  padding: 10rpx;
+  border: thistle 1px solid;
+  border-radius: 15rpx;
+}
+button{
+  width: 92%;
+  margin: 10rpx auto;
+}

@@ -7,11 +7,15 @@
   <swiper-item><image src="../../images/banner/banner2.png"></image></swiper-item>
   <swiper-item><image src="../../images/banner/banner3.png"></image></swiper-item>
 </swiper>
-<view class="answer" bindtap="showanswer">
-  <text>问答&须知</text>
-</view>
-<view class="all" bindtap="showall">
-  <text>全部车型</text>
+<view class="navcontainer">
+  <view class="answer"  bindtap="showanswer">
+    <text>问答&须知</text>
+    <view>点击进入></view>
+  </view>
+  <view class="all"  bindtap="showall">
+    <text>全部车型</text>
+    <view>点击进入></view>
+  </view>
 </view>
 <van-divider contentPosition="center" textColor="#1989fa" fontSize="18">热门推荐</van-divider>
 <view class="product-container">

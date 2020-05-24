@@ -21,6 +21,22 @@
       <image mode="widthFix" src="{{productmessage.imgSrc1}}"></image>
       <image mode="widthFix" src="{{productmessage.imgSrc2}}"></image>
     </view>
+    <view class="commentcontainer">
+      <view class="title">
+      <text class="commentcounter">相关评论({{commentList.length}})</text>
+      <text class="lookmore" bindtap="todetail" wx:if="{{commentList.length>2}}">查看更多></text>      <!-- 当评论数超过2条时，才显示该元素 -->
+      </view>
+      <view class="usercomment" wx:for="{{commentList}}" wx:for-item="item" wx:key="index" wx:if="{{index<2}}">    <!-- 最多只在页面显示两条评论 -->
+        <view class="usermsg">
+          <image src="{{item.userimg}}"></image>
+          <text>{{item.username}}</text>
+        </view>
+        <view class="commentdetail">
+          {{item.commentdetail}}
+        </view>
+      </view>
+      <view class="usercomment" wx:if="{{commentList.length==0}}">暂无评论哦~</view>     <!-- 当评论条数为0时，显示暂无评论 -->
+    </view>
   </view>
 </view>
 <van-goods-action>
